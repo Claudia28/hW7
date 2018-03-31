@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Airplane train</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="style.css"></link>
+    <!-- LINK TO FIREBASE GOES HERE -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  </head>
+  <body>
+
+          <div class="container">
+        
+            <div class="jumbotron jumbotron-fluid alert-success">
+              <div class="container">
+                <h1 class="display-3">The Anytime, everytime train</h1>
+                <p class="lead">Come aboard the airplane train</p>
+              </div>
+            </div>
+        
+        
+            <div class="card">
+              <h4 class="card-header alert-primary">Current Train Schedule</h4>
+              <div class="card-body">
+        
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency(min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                    <th scope="row">Fast Train</th>
+                        <td>San Fran</td>
+                        <td>15</td>
+                        <td>""</td>
+                        <td>""</td>
+                      </tr>
+                  <tr><th scope="row">S.L.O.W but Reliable</th>
+                    <td>Portland</td>
+                    <td>60</td>
+                    <td></td>
+                    <td></td>
+                    
+                  </tr>
+                  <tr>
+                      <th scope="row">GrungeFair</th>
+                      <td>Seatle </td>
+                      <td> 25 </td>
+                      <td> </td>
+                      <td> </td>
+
+                  </tr>
+                  
+                      
+
+
+
+
+
+
+                <tbody id="train-list">
+        
+                </tbody>
+              </table>
+        
+              </div>
+            </div>
+        
+            <hr></hr>
+        
+            <div class="card">
+              <h4 class="card-header alert-primary">Add Train</h4>
+              <div class="card-body">
+        
+              <form>
+                <div class="form-group">
+                  <label>Train Name</label>
+                  <input type="text" class="form-control" id="train-input">
+                </div>
+                <div class="form-group">
+                  <label>Destination</label>
+                  <input type="text" class="form-control" id="destination-input">
+                </div>
+                <div class="form-group">
+                  <label>First Train Time (HH:Mm - military time)</label>
+                  <input type="text" class="form-control" id="time-input">
+                </div>
+                <div class="form-group">
+                  <label>Frequency (min)</label>
+                  <input type="text" class="form-control" id="frequency-input">
+                </div>
+                <button type="submit" class="btn btn-primary" id="add-train">Submit</button>
+              </form>		
+        
+              </div>
+             </div>
+        
+          </div>
+          <script src="https://code.jquery.com/jquery.js"></script>
+          <!-- Script -->
+          <script src="app.js">
+          </script>
+        
+        </body>
+        </html>
